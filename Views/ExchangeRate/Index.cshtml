@@ -1,0 +1,8 @@
+﻿@model ExchangeRateViewModel
+
+<ol>
+    @foreach (var currencyExchangeRate in Model.CurrencyExchangeRates)
+    {
+        <li>(@currencyExchangeRate.CurrencyCode) @currencyExchangeRate.CurrencyName -> buying at @currencyExchangeRate.CurrencyBuying ETB and selling at @currencyExchangeRate.CurrencySelling</li>
+    }
+</ol>
