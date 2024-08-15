@@ -37,3 +37,4 @@ C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\WebDriver.dll
+C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\obj\Debug\net8.0\BanksExchangeRates.sourcelink.json

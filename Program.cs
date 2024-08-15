@@ -2,7 +2,7 @@ using BanksExchangeRates.Domain.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.Configure<XPathModel>(builder.Configuration.GetSection("BanksExchangeRates:CBE"));
+builder.Services.Configure<List<XPathModel>>(builder.Configuration.GetSection("BanksExchangeRates"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

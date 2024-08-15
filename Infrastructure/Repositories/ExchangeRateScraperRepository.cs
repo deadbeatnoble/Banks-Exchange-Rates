@@ -8,11 +8,12 @@ namespace BanksExchangeRates.Infrastructure.Repositories
     public class ExchangeRateScraperRepository : IExchangeRateScraper
     {
         public List<CurrencyExchangeRate> scrapeExchangeRate(HtmlDocument htmlDocument, XPathModel xPathModel) {
+
             var currencyExchangeRates = new List<CurrencyExchangeRate>();
 
             var table = htmlDocument.DocumentNode.Descendants("table")
-                .Where(tb => xPathModel.TableClassOrIdValue == "" ? true : tb.Attributes[xPathModel.TableClassOrId].Value == xPathModel.TableClassOrIdValue)
-                .FirstOrDefault();
+                .FirstOrDefault(tb => string.IsNullOrEmpty(xPathModel.TableClassOrIdValue) || (tb.Attributes[xPathModel.TableClassOrId] != null && tb.Attributes[xPathModel.TableClassOrId].Value == xPathModel.TableClassOrIdValue));
+
 
             if (table != null) {
                 foreach (var row in table.SelectNodes(".//tr").Skip(int.Parse(xPathModel.NumberOfTableRowsToSkip)))

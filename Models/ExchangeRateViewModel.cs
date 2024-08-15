@@ -4,6 +4,6 @@ namespace BanksExchangeRates.Models
 {
     public class ExchangeRateViewModel
     {
-        public List<CurrencyExchangeRate> CurrencyExchangeRates = new List<CurrencyExchangeRate>();
+        public List<List<CurrencyExchangeRate>> BanksExchangeRates = new List<List<CurrencyExchangeRate>>();
     }
 }

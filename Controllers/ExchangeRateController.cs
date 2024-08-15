@@ -11,24 +11,43 @@ namespace BanksExchangeRates.Controllers
 {
     public class ExchangeRateController : Controller
     {
-        private readonly IOptions<XPathModel> _options;
-        public ExchangeRateController(IOptions<XPathModel> options)
+        private readonly IOptions<List<XPathModel>> _options;
+        public ExchangeRateController(IOptions<List<XPathModel>> options)
         {
             _options = options;
         }
         public async Task<IActionResult> Index()
         {
-            /*var web = new ChromeDriver(new ChromeOptions());
-            web.Navigate().GoToUrl("https://www.combanketh.et/en/exchange-rate/");
-            var document = web.PageSource;*/
+            /*var samplePages = new List<string> {
+                new SamplePage().CBE_EXCHANGE_RATE_PAGE,
+                new SamplePage().OROMIA_EXCHANGE_RATE_PAGE,
+                new SamplePage().BUNA_EXCHANGE_RATE_PAGE,
+                new SamplePage().DASHEN_EXCHANGE_RATE_PAGE,
+                new SamplePage().ZEMEN_EXCHANGE_RATE_PAGE,
+                new SamplePage().AMHARA_EXCHANGE_RATE_PAGE,
+                new SamplePage().COOP_EXCHANGE_RATE_PAGE
+                };*/
+            var BanksExchangeRates = new List<List<CurrencyExchangeRate>>();
+            foreach (var (xPathModel, index) in _options.Value.Select((value, index) => (value, index)))
+            {
+                ChromeOptions options = new ChromeOptions();
+                options.AddArgument("--headless");
 
-            var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
-            var x = new HtmlDocument();
-            x.LoadHtml(new SamplePage().CBE_EXCHANGE_RATE_PAGE);
-            var currencyExchangeRates = exchangeRateScraperRepository.scrapeExchangeRate(x, _options.Value);
+                var web = new ChromeDriver(options);
+                web.Navigate().GoToUrl(xPathModel.ExchangeRateWebPageUrl);
+                var document = web.PageSource;
 
-            var exchangeRateViewModel = new ExchangeRateViewModel { 
-                CurrencyExchangeRates = currencyExchangeRates
+
+                var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
+                var x = new HtmlDocument();
+                x.LoadHtml(document);
+                var currencyExchangeRates = exchangeRateScraperRepository.scrapeExchangeRate(x, xPathModel);
+                BanksExchangeRates.Add(currencyExchangeRates);
+            }
+            
+
+            var exchangeRateViewModel = new ExchangeRateViewModel {
+                BanksExchangeRates = BanksExchangeRates
             };
 
             return View("Index", exchangeRateViewModel);
