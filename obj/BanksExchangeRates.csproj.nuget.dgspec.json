@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[1.0.2, )"
             },
+            "Microsoft.AspNet.SignalR.Client": {
+              "target": "Package",
+              "version": "[2.4.3, )"
+            },
             "Selenium.WebDriver": {
               "target": "Package",
               "version": "[4.23.0, )"

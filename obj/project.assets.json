@@ -37,6 +37,22 @@
           }
         }
       },
+      "Microsoft.AspNet.SignalR.Client/2.4.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -141,6 +157,30 @@
         "lib/net45/HtmlAgilityPack.xml"
       ]
     },
+    "Microsoft.AspNet.SignalR.Client/2.4.3": {
+      "sha512": "W+sWtcEUG4Z2Ea+tLZs4n8SVjpVU/7MSb6TrfJ9/AVdQ0Yu75vaDWzbIvjk1TvoqdyQldrpsWXRyHtGU/jHtiQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.signalr.client/2.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/net40/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/net45/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/netstandard1.3/Microsoft.AspNet.SignalR.Client.xml",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.dll",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.pdb",
+        "lib/netstandard2.0/Microsoft.AspNet.SignalR.Client.xml",
+        "microsoft.aspnet.signalr.client.2.4.3.nupkg.sha512",
+        "microsoft.aspnet.signalr.client.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -217,6 +257,7 @@
     "net8.0": [
       "HtmlAgilityPack >= 1.11.62",
       "HtmlAgilityPack.CssSelectors >= 1.0.2",
+      "Microsoft.AspNet.SignalR.Client >= 2.4.3",
       "Selenium.WebDriver >= 4.23.0",
       "Selenium.WebDriver.ChromeDriver >= 127.0.6533.11900"
     ]
@@ -273,6 +314,10 @@
           "HtmlAgilityPack.CssSelectors": {
             "target": "Package",
             "version": "[1.0.2, )"
+          },
+          "Microsoft.AspNet.SignalR.Client": {
+            "target": "Package",
+            "version": "[2.4.3, )"
           },
           "Selenium.WebDriver": {
             "target": "Package",

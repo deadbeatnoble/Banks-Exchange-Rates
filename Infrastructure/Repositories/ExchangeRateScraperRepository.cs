@@ -16,7 +16,7 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 
 
             if (table != null) {
-                foreach (var row in table.SelectNodes(".//tr").Skip(int.Parse(xPathModel.NumberOfTableRowsToSkip)))
+                foreach (var row in table.SelectNodes(".//tr").Skip(int.Parse(xPathModel.NumberOfTableRowsToSkipFromTop)).Take(table.SelectNodes(".//tr").Count - (int.Parse(xPathModel.NumberOfTableRowsToSkipFromTop) + int.Parse(xPathModel.NumberOfTableRowsToSkipFromBottom))))
                 {
                     var cells = row.SelectNodes(".//td");
 

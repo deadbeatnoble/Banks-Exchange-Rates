@@ -6,7 +6,8 @@
         public string ExchangeRateWebPageUrl { get; set; }
         public string TableClassOrId { get; set; }
         public string TableClassOrIdValue { get; set; }
-        public string NumberOfTableRowsToSkip { get; set; }
+        public string NumberOfTableRowsToSkipFromTop { get; set; }
+        public string NumberOfTableRowsToSkipFromBottom { get; set; }
         public string CurrencyCodeCellNumber { get; set; }
         public string CurrencyCodeXPath { get; set; }
         public string CurrencyNameCellNumber { get; set; }
