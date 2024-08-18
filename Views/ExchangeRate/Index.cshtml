@@ -1,16 +1,5 @@
-﻿@model ExchangeRateViewModel
+﻿
+<p id="data"></p>
 
-<ul>
-    @foreach (var (banksExchangeRate, index) in Model.BanksExchangeRates.Select((value, index) => (value, index+1)))
-    {
-       <li>
-           <h2>Banks @index</h2>
-           <ol>
-                @foreach (var currencyExchangeRate in @banksExchangeRate)
-                {
-                    <li>(@currencyExchangeRate.CurrencyCode) @currencyExchangeRate.CurrencyName -> buying at @currencyExchangeRate.CurrencyBuying ETB and selling at @currencyExchangeRate.CurrencySelling</li>
-                }
-           </ol>
-        </li>
-    }
-</ul>
+<script src="~/js/signalr.js"></script>
+<script src="~/js/data.js"></script>

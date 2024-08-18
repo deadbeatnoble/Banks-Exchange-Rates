@@ -1,10 +1,16 @@
 using BanksExchangeRates.Domain.Entities;
+using BanksExchangeRates.Domain.Interfaces;
+using BanksExchangeRates.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<List<XPathModel>>(builder.Configuration.GetSection("BanksExchangeRates"));
 
 // Add services to the container.
+builder.Services.AddSignalR();
+builder.Services.AddScoped<IDataService, DataServiceRepository>();
+builder.Services.AddScoped<DataUpdateService>();
+builder.Services.AddHostedService<DataUpdateService>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -23,6 +29,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapHub<MyHub>("/myhub");
 
 app.MapControllerRoute(
     name: "default",

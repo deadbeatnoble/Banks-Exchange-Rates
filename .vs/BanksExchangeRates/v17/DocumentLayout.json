@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\wwwroot\\js\\data.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:wwwroot\\js\\data.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\util\\samplepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:util\\samplepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\controllers\\exchangeratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:controllers\\exchangeratecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\infrastructure\\repositories\\exchangeratescraperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:infrastructure\\repositories\\exchangeratescraperrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|c:\\users\\hp\\desktop\\workshop\\dotnet workshop\\banksexchangerates\\infrastructure\\repositories\\dataupdateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35F77934-83C0-4886-A119-4694FF8A2375}|BanksExchangeRates.csproj|solutionrelative:infrastructure\\repositories\\dataupdateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,53 +22,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExchangeRateScraperRepository.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Infrastructure\\Repositories\\ExchangeRateScraperRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ExchangeRateScraperRepository.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Infrastructure\\Repositories\\ExchangeRateScraperRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Repositories\\ExchangeRateScraperRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "DataUpdateService.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Infrastructure\\Repositories\\DataUpdateService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\DataUpdateService.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Infrastructure\\Repositories\\DataUpdateService.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\DataUpdateService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-17T07:14:04.866Z"
+              "WhenOpened": "2024-08-18T16:33:55.276Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AQIAALYAAAAAAAAAAAAmwMwAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-15T11:34:40.158Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SamplePage.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Util\\SamplePage.cs",
-              "RelativeDocumentMoniker": "Util\\SamplePage.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Util\\SamplePage.cs",
-              "RelativeToolTip": "Util\\SamplePage.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFZoAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T07:16:09.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ExchangeRateController.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Controllers\\ExchangeRateController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ExchangeRateController.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\Controllers\\ExchangeRateController.cs",
-              "RelativeToolTip": "Controllers\\ExchangeRateController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAAwCEAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-14T08:05:28.452Z",
+              "Title": "data.js",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\wwwroot\\js\\data.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\data.js",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\wwwroot\\js\\data.js",
+              "RelativeToolTip": "wwwroot\\js\\data.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-18T15:43:12.378Z",
               "EditorCaption": ""
             }
           ]

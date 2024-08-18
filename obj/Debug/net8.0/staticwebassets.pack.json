@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\wwwroot\\js\\data.js",
+      "PackagePath": "staticwebassets\\js\\data.js"
+    },
+    {
+      "Id": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\wwwroot\\js\\signalr.js",
+      "PackagePath": "staticwebassets\\js\\signalr.js"
+    },
+    {
       "Id": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
