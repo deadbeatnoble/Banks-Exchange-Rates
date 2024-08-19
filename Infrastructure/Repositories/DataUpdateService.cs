@@ -26,7 +26,7 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                     var data = await dataService.GetUpdatedDataAsync();
                     await _hubContext.Clients.All.SendAsync("ReceiveUpdatedData", JsonSerializer.Serialize(data));
                 }
-                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(15), stoppingToken);
             }
         }
     }

@@ -16,18 +16,16 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 
 
             if (table != null) {
-                foreach (var row in table.SelectNodes(".//tr").Skip(int.Parse(xPathModel.NumberOfTableRowsToSkipFromTop)).Take(table.SelectNodes(".//tr").Count - (int.Parse(xPathModel.NumberOfTableRowsToSkipFromTop) + int.Parse(xPathModel.NumberOfTableRowsToSkipFromBottom))))
+                foreach (var row in table.SelectNodes(".//tr").Skip(xPathModel.NumberOfTableRowsToSkipFromTop).Take(table.SelectNodes(".//tr").Count - (xPathModel.NumberOfTableRowsToSkipFromTop + xPathModel.NumberOfTableRowsToSkipFromBottom)))
                 {
                     var cells = row.SelectNodes(".//td");
 
-                    //var currencyCode = xPathModel.CurrencyCodeXPath == "" ? cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].InnerText.Trim() : cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].SelectSingleNode(xPathModel.CurrencyCodeXPath).InnerText.Trim();
-
                     currencyExchangeRates.Add(
                         new CurrencyExchangeRate {
-                            CurrencyCode = cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].InnerText.Trim(),
-                            CurrencyName = cells[int.Parse(xPathModel.CurrencyNameCellNumber)].InnerText.Trim(),
-                            CurrencyBuying = decimal.Parse(cells[int.Parse(xPathModel.CurrencyBuyingCellNumber)].InnerText.Trim()),
-                            CurrencySelling = decimal.Parse(cells[int.Parse(xPathModel.CurrencySellingCellNumber)].InnerText.Trim())
+                            CurrencyCode = string.IsNullOrEmpty(xPathModel.CurrencyCodeXPath) ? cells[xPathModel.CurrencyCodeCellNumber].InnerText.Trim() : cells[xPathModel.CurrencyCodeCellNumber].SelectSingleNode(xPathModel.CurrencyCodeXPath).InnerText.Trim(),
+                            CurrencyName = string.IsNullOrEmpty(xPathModel.CurrencyNameXPath) ? cells[xPathModel.CurrencyNameCellNumber].InnerText.Trim() : cells[xPathModel.CurrencyNameCellNumber].SelectSingleNode(xPathModel.CurrencyNameXPath).InnerText.Trim(),
+                            CurrencyBuying = decimal.Parse(string.IsNullOrEmpty(xPathModel.CurrencyBuyingXPath) ? cells[xPathModel.CurrencyBuyingCellNumber].InnerText.Trim() : cells[xPathModel.CurrencyBuyingCellNumber].SelectSingleNode(xPathModel.CurrencyBuyingXPath).InnerText.Trim()),
+                            CurrencySelling = decimal.Parse(string.IsNullOrEmpty(xPathModel.CurrencySellingXPath) ? cells[xPathModel.CurrencySellingCellNumber].InnerText.Trim() : cells[xPathModel.CurrencySellingCellNumber].SelectSingleNode(xPathModel.CurrencySellingXPath).InnerText.Trim())
                         });
                 }
             }

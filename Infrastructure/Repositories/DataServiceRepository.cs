@@ -38,16 +38,17 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 new SamplePage().TSEHAY_EXCHANGE_RATE_PAGE,
                 new SamplePage().TSEDEY_EXCHANGE_RATE_PAGE,
                 new SamplePage().SIINQEE_EXCHANGE_RATE_PAGE,
-                new SamplePage().GADAA_EXCHANGE_RATE_PAGE
+                new SamplePage().GADAA_EXCHANGE_RATE_PAGE,
+                new SamplePage().GOHBETOCH_EXCHANGE_RATE_PAGE
                 };
 
             foreach (var (xPathModel, index) in _xPathModels.Select((value, index) => (value, index)))
             {
-                //var document = new FetchWebPage().FecthWebPage(xPathModel.ExchangeRateWebPageUrl).Result;
+                var document = new FetchWebPage().FecthWebPage(xPathModel.ExchangeRateWebPageUrl).Result;
 
                 var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
                 var x = new HtmlDocument();
-                x.LoadHtml(samplePages[index]);
+                x.LoadHtml(document);
                 var banksExchangeRatesModel = exchangeRateScraperRepository.scrapeExchangeRate(x, xPathModel);
                 banksExchangeRatesModels.Add(banksExchangeRatesModel);
             }

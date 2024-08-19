@@ -10,10 +10,14 @@ namespace BanksExchangeRates.Infrastructure.Repositories
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
 
-            var web = new ChromeDriver(options);
-            web.Navigate().GoToUrl(url);
+            var _driver = new ChromeDriver(options);
 
-            return web.PageSource;
+            _driver.Manage().Timeouts().PageLoad = TimeSpan.FromMinutes(5); // Adjust as needed
+            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
+
+            _driver.Navigate().GoToUrl(url);
+
+            return _driver.PageSource;
         }
     }
 }
