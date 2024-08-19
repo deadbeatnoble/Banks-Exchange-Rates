@@ -7,7 +7,7 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 {
     public class ExchangeRateScraperRepository : IExchangeRateScraper
     {
-        public List<CurrencyExchangeRate> scrapeExchangeRate(HtmlDocument htmlDocument, XPathModel xPathModel) {
+        public BanksExchangeRatesModel scrapeExchangeRate(HtmlDocument htmlDocument, XPathModel xPathModel) {
 
             var currencyExchangeRates = new List<CurrencyExchangeRate>();
 
@@ -20,6 +20,8 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 {
                     var cells = row.SelectNodes(".//td");
 
+                    //var currencyCode = xPathModel.CurrencyCodeXPath == "" ? cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].InnerText.Trim() : cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].SelectSingleNode(xPathModel.CurrencyCodeXPath).InnerText.Trim();
+
                     currencyExchangeRates.Add(
                         new CurrencyExchangeRate {
                             CurrencyCode = cells[int.Parse(xPathModel.CurrencyCodeCellNumber)].InnerText.Trim(),
@@ -30,7 +32,12 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 }
             }
 
-            return currencyExchangeRates;
+            var banksExchangeRatesModel = new BanksExchangeRatesModel {
+                BankName = xPathModel.BankName,
+                CurrencyExchangeRates = currencyExchangeRates
+            };
+
+            return banksExchangeRatesModel;
         }
     }
 }

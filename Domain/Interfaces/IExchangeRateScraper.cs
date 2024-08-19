@@ -6,7 +6,7 @@ namespace BanksExchangeRates.Domain.Interfaces
 {
     public interface IExchangeRateScraper
     {
-        List<CurrencyExchangeRate> scrapeExchangeRate(HtmlDocument html, XPathModel xPathModel);
+        BanksExchangeRatesModel scrapeExchangeRate(HtmlDocument html, XPathModel xPathModel);
 
     }
 }

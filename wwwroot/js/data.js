@@ -1,40 +1,32 @@
 ﻿const connection = new signalR.HubConnectionBuilder().withUrl("/myhub").build();
 
 connection.on("ReceiveUpdatedData", function (data) {
+    const container = document.getElementById("data")
+
     const parsedData = JSON.parse(data);
-
-    const dataContainer = document.getElementById("data");
-    dataContainer.textContent = data;
-    console.log(data);
+    container.textContent = "";
 
 
-    /*dataContainer.innerHTML = "";
-    const ul = document.createElement("ul");
-    parsedData.forEach((banksExchangeRate, index) => {
-        const li = document.createElement("li");
+    parsedData.forEach((bank, index) => {
+        const bankTitle = document.createElement('h3');
+        bankTitle.textContent = `${bank.BankName}`;
 
-        li.innerHTML = `
-            <h2>Banks ${index + 1}</h2>
-            <ol>
-                ${banksExchangeRate.CurrencyExchangeRates.map(rate =>
-            `<li>(${currencyExchangeRate.CurrencyCode}) ${currencyExchangeRate.CurrencyName} -> buying at ${currencyExchangeRate.CurrencyBuying} ETB and selling at ${currencyExchangeRate.CurrencySelling}</li>`
-        ).join('')}
-            </ol>
-        `;
-        ul.appendChild(li);
-    })
+        const bankContainer = document.createElement('div');
+        const listElement = document.createElement('ul');
+        const orderedList = document.createElement('ol');
 
-    dataContainer.appendChild(ul);*/
+        bank.CurrencyExchangeRates.forEach(item => {
+            const itemElement = document.createElement('li');
+            itemElement.textContent = `(${item.CurrencyCode}) ${item.CurrencyName} -> buying at ${item.CurrencyBuying} and selling at ${item.CurrencySelling}`;
+            orderedList.appendChild(itemElement);
+        });
 
+        listElement.appendChild(orderedList);
+        bankContainer.appendChild(bankTitle);
+        bankContainer.appendChild(listElement);
+        container.appendChild(bankContainer);
+    });
 
-    //document.getElementById("data").innerHTML = `${parsedData}`;
+    console.log(parsedData);
 });
-connection.start().then(() => {
-    fetch("/ExchangeRate/Index")
-        .then(response => {
-            if (!response.ok) {
-                console.error("failed to send data");
-            }
-        })
-        .catch(err => console.error(err));
-}).catch(err => console.error(error));
+connection.start();

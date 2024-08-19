@@ -1,5 +1,5 @@
-﻿
-using BanksExchangeRates.Domain.Interfaces;
+﻿using BanksExchangeRates.Domain.Interfaces;
+using BanksExchangeRates.Util;
 using Microsoft.AspNetCore.SignalR;
 using System.Text.Json;
 

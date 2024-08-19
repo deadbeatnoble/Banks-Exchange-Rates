@@ -1,6 +1,7 @@
 using BanksExchangeRates.Domain.Entities;
 using BanksExchangeRates.Domain.Interfaces;
 using BanksExchangeRates.Infrastructure.Repositories;
+using BanksExchangeRates.Util;
 
 var builder = WebApplication.CreateBuilder(args);
 

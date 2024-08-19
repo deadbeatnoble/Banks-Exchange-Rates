@@ -2,6 +2,7 @@
 {
     public class BanksExchangeRatesModel
     {
-        public Dictionary<string, XPathModel> Banks { get; set; }
+        public string BankName { get; set; }
+        public List<CurrencyExchangeRate> CurrencyExchangeRates { get; set; }
     }
 }

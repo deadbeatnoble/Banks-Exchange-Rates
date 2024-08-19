@@ -4,6 +4,6 @@ namespace BanksExchangeRates.Domain.Interfaces
 {
     public interface IDataService
     {
-        Task<List<List<CurrencyExchangeRate>>> GetUpdatedDataAsync();
+        Task<List<BanksExchangeRatesModel>> GetUpdatedDataAsync();
     }
 }
