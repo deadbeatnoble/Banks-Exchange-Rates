@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "8UvEW1AEbTI=",
+  "dgSpecHash": "UlouOoYdn4M=",
   "success": true,
   "projectFilePath": "C:\\Users\\HP\\Desktop\\Workshop\\DOTNET workshop\\BanksExchangeRates\\BanksExchangeRates.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\htmlagilitypack\\1.11.62\\htmlagilitypack.1.11.62.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\htmlagilitypack.cssselectors\\1.0.2\\htmlagilitypack.cssselectors.1.0.2.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnet.signalr.client\\2.4.3\\microsoft.aspnet.signalr.client.2.4.3.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\selenium.webdriver\\4.23.0\\selenium.webdriver.4.23.0.nupkg.sha512",
-    "C:\\Users\\HP\\.nuget\\packages\\selenium.webdriver.chromedriver\\127.0.6533.11900\\selenium.webdriver.chromedriver.127.0.6533.11900.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
   ],
   "logs": [
     {

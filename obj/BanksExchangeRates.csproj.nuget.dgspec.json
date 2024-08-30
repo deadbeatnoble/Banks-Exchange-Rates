@@ -57,14 +57,6 @@
             "Microsoft.AspNet.SignalR.Client": {
               "target": "Package",
               "version": "[2.4.3, )"
-            },
-            "Selenium.WebDriver": {
-              "target": "Package",
-              "version": "[4.23.0, )"
-            },
-            "Selenium.WebDriver.ChromeDriver": {
-              "target": "Package",
-              "version": "[127.0.6533.11900, )"
             }
           },
           "imports": [

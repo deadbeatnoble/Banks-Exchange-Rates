@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BanksExchangeRates", "BanksExchangeRates.csproj", "{35F77934-83C0-4886-A119-4694FF8A2375}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BanksExchangeRates", "BanksExchangeRates.csproj", "{35F77934-83C0-4886-A119-4694FF8A2375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testing webpage fetching", "..\testing webpage fetching\testing webpage fetching.csproj", "{60DF2E76-A8F0-4518-A409-72FFF081D645}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{35F77934-83C0-4886-A119-4694FF8A2375}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35F77934-83C0-4886-A119-4694FF8A2375}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35F77934-83C0-4886-A119-4694FF8A2375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DF2E76-A8F0-4518-A409-72FFF081D645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DF2E76-A8F0-4518-A409-72FFF081D645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DF2E76-A8F0-4518-A409-72FFF081D645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DF2E76-A8F0-4518-A409-72FFF081D645}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

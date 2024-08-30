@@ -32,11 +32,7 @@ C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\HtmlAgilityPack.CssSelectors.dll
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\obj\Debug\net8.0\BanksExchangeRates.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\obj\Debug\net8.0\BanksExc.F228C1AE.Up2Date
-C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
-C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
-C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\WebDriver.dll
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\obj\Debug\net8.0\BanksExchangeRates.sourcelink.json
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\Microsoft.AspNet.SignalR.Client.dll
 C:\Users\HP\Desktop\Workshop\DOTNET workshop\BanksExchangeRates\bin\Debug\net8.0\libman.json

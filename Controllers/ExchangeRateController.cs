@@ -1,12 +1,8 @@
 ﻿using BanksExchangeRates.Domain.Entities;
-using BanksExchangeRates.Models;
 using BanksExchangeRates.Util;
-using HtmlAgilityPack;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Options;
-using OpenQA.Selenium.Chrome;
-using System.Text.Json;
 
 namespace BanksExchangeRates.Controllers
 {

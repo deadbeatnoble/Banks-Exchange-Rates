@@ -3,9 +3,6 @@ using BanksExchangeRates.Domain.Interfaces;
 using BanksExchangeRates.Util;
 using HtmlAgilityPack;
 using Microsoft.Extensions.Options;
-using OpenQA.Selenium.Chrome;
-using System.Reflection.Metadata;
-using System.Xml.Linq;
 
 namespace BanksExchangeRates.Infrastructure.Repositories
 {
@@ -23,7 +20,6 @@ namespace BanksExchangeRates.Infrastructure.Repositories
             var banksExchangeRatesModels = new List<BanksExchangeRatesModel>();
 
             var samplePages = new List<string> {
-                new SamplePage().CBE_EXCHANGE_RATE_PAGE,
                 new SamplePage().OROMIA_EXCHANGE_RATE_PAGE,
                 new SamplePage().BUNA_EXCHANGE_RATE_PAGE,
                 new SamplePage().DASHEN_EXCHANGE_RATE_PAGE,
@@ -42,13 +38,17 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 new SamplePage().GOHBETOCH_EXCHANGE_RATE_PAGE
                 };
 
+            var fetchWebPage = new FetchWebPage();
+            var allTasks = _xPathModels.Select(xpm => fetchWebPage.FecthWebPage(xpm.ExchangeRateWebPageUrl)).ToList();
+            var documents = await Task.WhenAll(allTasks);
+
             foreach (var (xPathModel, index) in _xPathModels.Select((value, index) => (value, index)))
             {
-                var document = new FetchWebPage().FecthWebPage(xPathModel.ExchangeRateWebPageUrl).Result;
+                //var document = new FetchWebPage().FecthWebPage(xPathModel.ExchangeRateWebPageUrl).Result;
 
                 var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
                 var x = new HtmlDocument();
-                x.LoadHtml(document);
+                x.LoadHtml(documents[index]);
                 var banksExchangeRatesModel = exchangeRateScraperRepository.scrapeExchangeRate(x, xPathModel);
                 banksExchangeRatesModels.Add(banksExchangeRatesModel);
             }
