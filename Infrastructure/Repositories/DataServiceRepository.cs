@@ -23,7 +23,6 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 new SamplePage().OROMIA_EXCHANGE_RATE_PAGE,
                 new SamplePage().BUNA_EXCHANGE_RATE_PAGE,
                 new SamplePage().DASHEN_EXCHANGE_RATE_PAGE,
-                new SamplePage().ZEMEN_EXCHANGE_RATE_PAGE,
                 new SamplePage().AMHARA_EXCHANGE_RATE_PAGE,
                 new SamplePage().COOP_EXCHANGE_RATE_PAGE,
                 new SamplePage().NIB_EXCHANGE_RATE_PAGE,
@@ -44,7 +43,6 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 
             foreach (var (xPathModel, index) in _xPathModels.Select((value, index) => (value, index)))
             {
-                //var document = new FetchWebPage().FecthWebPage(xPathModel.ExchangeRateWebPageUrl).Result;
 
                 var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
                 var x = new HtmlDocument();

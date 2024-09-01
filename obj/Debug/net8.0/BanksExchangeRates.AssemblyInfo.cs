@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BanksExchangeRates")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd886e9d39e36e0123af5517fa00e4e3d04dfbd2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+245c1bdef37af145efbd35385773d942d83f7140")]
 [assembly: System.Reflection.AssemblyProductAttribute("BanksExchangeRates")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BanksExchangeRates")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,15 +18,23 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+            using (var scope = _serviceProvider.CreateScope())
+            {
+                var dataService = scope.ServiceProvider.GetService<IDataService>();
+                var data = await dataService.GetUpdatedDataAsync();
+                await _hubContext.Clients.All.SendAsync("ReceiveUpdatedData", JsonSerializer.Serialize(data));
+            }
+
             while (!stoppingToken.IsCancellationRequested) 
             {
+                await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
+
                 using (var scope = _serviceProvider.CreateScope())
                 {
                     var dataService = scope.ServiceProvider.GetService<IDataService>();
                     var data = await dataService.GetUpdatedDataAsync();
                     await _hubContext.Clients.All.SendAsync("ReceiveUpdatedData", JsonSerializer.Serialize(data));
                 }
-                await Task.Delay(TimeSpan.FromSeconds(15), stoppingToken);
             }
         }
     }
