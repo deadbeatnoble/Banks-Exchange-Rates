@@ -1,8 +1,11 @@
-﻿const connection = new signalR.HubConnectionBuilder().withUrl("/myhub").build();
-
+﻿const container = document.getElementById("data");
+const connection = new signalR.HubConnectionBuilder().withUrl("/myhub").build();
 connection.on("ReceiveUpdatedData", function (data) {
-    const container = document.getElementById("data")
-
+    RenderUI(data);
+});
+connection.start();
+function RenderUI(data)
+{
     const parsedData = JSON.parse(data);
     container.innerHTML = ``;
 
@@ -108,5 +111,4 @@ connection.on("ReceiveUpdatedData", function (data) {
     });
 
     console.log(parsedData);
-});
-connection.start();
+}

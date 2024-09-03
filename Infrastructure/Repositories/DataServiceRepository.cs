@@ -26,7 +26,6 @@ namespace BanksExchangeRates.Infrastructure.Repositories
                 new SamplePage().AMHARA_EXCHANGE_RATE_PAGE,
                 new SamplePage().COOP_EXCHANGE_RATE_PAGE,
                 new SamplePage().NIB_EXCHANGE_RATE_PAGE,
-                new SamplePage().ADDIS_EXCHANGE_RATE_PAGE,
                 new SamplePage().GLOBAL_EXCHANGE_RATE_PAGE,
                 new SamplePage().AWASH_EXCHANGE_RATE_PAGE,
                 new SamplePage().HIBRET_EXCHANGE_RATE_PAGE,
@@ -43,7 +42,6 @@ namespace BanksExchangeRates.Infrastructure.Repositories
 
             foreach (var (xPathModel, index) in _xPathModels.Select((value, index) => (value, index)))
             {
-
                 var exchangeRateScraperRepository = new ExchangeRateScraperRepository();
                 var x = new HtmlDocument();
                 x.LoadHtml(documents[index]);
